@@ -23,10 +23,15 @@ class ViewController: UIViewController {
                 let lFoo = foo
                 self.label.text = "\(lFoo.name) \(lFoo.value)"
                 // And if you comment out the next line, the project will build just find.
-                let tFoo : Foo = foo
+//               let tFoo : Foo = foo
                 //  But this does not work:
                 //  error: use of undeclared type 'Foo'
                 //  How can Swift infer the type Foo, but not know about it?
+            })
+            
+            appDelegate.giveMeBar(completionHandler: { (bar) in
+                let tBar : Bar = bar;
+                self.label.text = "\(tBar.name) \(tBar.value)"
             })
         }
     }

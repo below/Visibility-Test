@@ -17,6 +17,9 @@
 		CB3629E51DCA521D0010CE53 /* SampleFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB3629DD1DCA521D0010CE53 /* SampleFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CB3629EC1DCA524E0010CE53 /* Foo.h in Headers */ = {isa = PBXBuildFile; fileRef = CB3629EA1DCA524E0010CE53 /* Foo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CB3629ED1DCA524E0010CE53 /* Foo.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3629EB1DCA524E0010CE53 /* Foo.m */; };
+		CB3629FA1DCA60560010CE53 /* SampleSwiftwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB3629F31DCA60560010CE53 /* SampleSwiftwork.framework */; };
+		CB3629FB1DCA60560010CE53 /* SampleSwiftwork.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB3629F31DCA60560010CE53 /* SampleSwiftwork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CB362A001DCA607F0010CE53 /* Bar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3629FF1DCA607F0010CE53 /* Bar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +29,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = CB3629DC1DCA521D0010CE53;
 			remoteInfo = SampleFramework;
+		};
+		CB3629F81DCA60560010CE53 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CB3629BB1DCA51F70010CE53 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CB3629F21DCA60560010CE53;
+			remoteInfo = SampleSwiftwork;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -37,6 +47,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				CB3629E51DCA521D0010CE53 /* SampleFramework.framework in Embed Frameworks */,
+				CB3629FB1DCA60560010CE53 /* SampleSwiftwork.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -56,6 +67,9 @@
 		CB3629E01DCA521D0010CE53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB3629EA1DCA524E0010CE53 /* Foo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Foo.h; sourceTree = "<group>"; };
 		CB3629EB1DCA524E0010CE53 /* Foo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Foo.m; sourceTree = "<group>"; };
+		CB3629F31DCA60560010CE53 /* SampleSwiftwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SampleSwiftwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB3629F61DCA60560010CE53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB3629FF1DCA607F0010CE53 /* Bar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,10 +78,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB3629E41DCA521D0010CE53 /* SampleFramework.framework in Frameworks */,
+				CB3629FA1DCA60560010CE53 /* SampleSwiftwork.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		CB3629D91DCA521D0010CE53 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB3629EF1DCA60560010CE53 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -82,6 +104,7 @@
 			children = (
 				CB3629C51DCA51F70010CE53 /* Visibility Test */,
 				CB3629DE1DCA521D0010CE53 /* SampleFramework */,
+				CB3629F41DCA60560010CE53 /* SampleSwiftwork */,
 				CB3629C41DCA51F70010CE53 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,6 +114,7 @@
 			children = (
 				CB3629C31DCA51F70010CE53 /* Visibility Test.app */,
 				CB3629DD1DCA521D0010CE53 /* SampleFramework.framework */,
+				CB3629F31DCA60560010CE53 /* SampleSwiftwork.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -119,6 +143,15 @@
 			path = SampleFramework;
 			sourceTree = "<group>";
 		};
+		CB3629F41DCA60560010CE53 /* SampleSwiftwork */ = {
+			isa = PBXGroup;
+			children = (
+				CB3629F61DCA60560010CE53 /* Info.plist */,
+				CB3629FF1DCA607F0010CE53 /* Bar.swift */,
+			);
+			path = SampleSwiftwork;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -128,6 +161,13 @@
 			files = (
 				CB3629EC1DCA524E0010CE53 /* Foo.h in Headers */,
 				CB3629E11DCA521D0010CE53 /* SampleFramework.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB3629F01DCA60560010CE53 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +187,7 @@
 			);
 			dependencies = (
 				CB3629E31DCA521D0010CE53 /* PBXTargetDependency */,
+				CB3629F91DCA60560010CE53 /* PBXTargetDependency */,
 			);
 			name = "Visibility Test";
 			productName = "Visibility Test";
@@ -171,6 +212,24 @@
 			productReference = CB3629DD1DCA521D0010CE53 /* SampleFramework.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		CB3629F21DCA60560010CE53 /* SampleSwiftwork */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB3629FC1DCA60560010CE53 /* Build configuration list for PBXNativeTarget "SampleSwiftwork" */;
+			buildPhases = (
+				CB3629EE1DCA60560010CE53 /* Sources */,
+				CB3629EF1DCA60560010CE53 /* Frameworks */,
+				CB3629F01DCA60560010CE53 /* Headers */,
+				CB3629F11DCA60560010CE53 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SampleSwiftwork;
+			productName = SampleSwiftwork;
+			productReference = CB3629F31DCA60560010CE53 /* SampleSwiftwork.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -191,6 +250,12 @@
 						DevelopmentTeam = M3DTZN9V9B;
 						ProvisioningStyle = Automatic;
 					};
+					CB3629F21DCA60560010CE53 = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = M3DTZN9V9B;
+						LastSwiftMigration = 0820;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = CB3629BE1DCA51F70010CE53 /* Build configuration list for PBXProject "Visibility Test" */;
@@ -208,6 +273,7 @@
 			targets = (
 				CB3629C21DCA51F70010CE53 /* Visibility Test */,
 				CB3629DC1DCA521D0010CE53 /* SampleFramework */,
+				CB3629F21DCA60560010CE53 /* SampleSwiftwork */,
 			);
 		};
 /* End PBXProject section */
@@ -224,6 +290,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		CB3629DB1DCA521D0010CE53 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB3629F11DCA60560010CE53 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -250,6 +323,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CB3629EE1DCA60560010CE53 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB362A001DCA607F0010CE53 /* Bar.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -257,6 +338,11 @@
 			isa = PBXTargetDependency;
 			target = CB3629DC1DCA521D0010CE53 /* SampleFramework */;
 			targetProxy = CB3629E21DCA521D0010CE53 /* PBXContainerItemProxy */;
+		};
+		CB3629F91DCA60560010CE53 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CB3629F21DCA60560010CE53 /* SampleSwiftwork */;
+			targetProxy = CB3629F81DCA60560010CE53 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -374,6 +460,7 @@
 		CB3629D61DCA51F70010CE53 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = M3DTZN9V9B;
 				INFOPLIST_FILE = "Visibility Test/Info.plist";
@@ -387,6 +474,7 @@
 		CB3629D71DCA51F70010CE53 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = M3DTZN9V9B;
 				INFOPLIST_FILE = "Visibility Test/Info.plist";
@@ -441,6 +529,55 @@
 			};
 			name = Release;
 		};
+		CB3629FD1DCA60560010CE53 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = M3DTZN9V9B;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = SampleSwiftwork/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vonbelow.SampleSwiftwork;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CB3629FE1DCA60560010CE53 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = M3DTZN9V9B;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = SampleSwiftwork/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vonbelow.SampleSwiftwork;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -466,6 +603,14 @@
 			buildConfigurations = (
 				CB3629E71DCA521D0010CE53 /* Debug */,
 				CB3629E81DCA521D0010CE53 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CB3629FC1DCA60560010CE53 /* Build configuration list for PBXNativeTarget "SampleSwiftwork" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB3629FD1DCA60560010CE53 /* Debug */,
+				CB3629FE1DCA60560010CE53 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

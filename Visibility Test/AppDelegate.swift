@@ -8,6 +8,7 @@
 
 import UIKit
 import SampleFramework
+import SampleSwiftwork
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,5 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         completionHandler (foo)
     }
     
+    func giveMeBar (completionHandler : @escaping ( _ bar : Bar ) -> Void) {
+        let bar : Bar = Bar()
+        completionHandler (bar)
+    }
 }
 
